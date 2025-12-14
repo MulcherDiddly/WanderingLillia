@@ -8,10 +8,15 @@ const adventures = adventuresText
 export default {
   async fetch(request) {
     const url = new URL(request.url);
+    const user = url.searchParams.get("user") ?? "Someone";
 
     if (url.pathname === "/adventure") {
       const pick = adventures[Math.floor(Math.random() * adventures.length)];
-      return new Response(pick);
+
+      // Replace all occurrences of [user]
+      const result = pick.replace(/\[user\]/gi, user);
+
+      return new Response(result);
     }
 
     if (url.pathname === "/dig") {
