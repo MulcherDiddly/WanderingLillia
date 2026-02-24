@@ -24,10 +24,10 @@ export default {
       const roll = Math.floor(Math.random() * 1000) + 1;
 
       if (roll === 1000) {
-        return new Response(`${user} has found the GOLDEN SHROOMY! `);
+        return new Response(`${user} has found the GOLDEN SHROOMIE! `);
       }
 
-      return new Response(`${user} has found a regular shroomy.`);
+      return new Response(`${user} has found a regular shroomie.`);
     }
 
     return new Response("Not found", { status: 404 });
