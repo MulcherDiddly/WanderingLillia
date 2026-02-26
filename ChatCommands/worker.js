@@ -24,10 +24,10 @@ export default {
       const roll = Math.floor(Math.random() * 1000) + 1;
 
       if (user === "1Dxno") {
-        const rolldxno = Math.floor(Math.random() * 3) + 1;
-        //if (rolldxno === 3) {
+        const rolldxno = Math.floor(Math.random() * 10) + 1;
+        if (rolldxno === 10) {
           return new Response(`${user} has found the GOLDEN SHROOMIE! `);
-        //}
+        }
       }
       if (roll === 1000) {
         return new Response(`${user} has found the GOLDEN SHROOMIE! `);
