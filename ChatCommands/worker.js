@@ -23,6 +23,12 @@ export default {
       const user = url.searchParams.get("user") ?? "Someone";
       const roll = Math.floor(Math.random() * 1000) + 1;
 
+      if (user === "1dxno") {
+        const rolldxno = Math.floor(Math.random() * 3) + 1;
+        if (rolldxno === 3) {
+          return new Response(`${user} has found the GOLDEN SHROOMIE! `);
+        }
+      }
       if (roll === 1000) {
         return new Response(`${user} has found the GOLDEN SHROOMIE! `);
       }
